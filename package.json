@@ -1,0 +1,76 @@
+{
+  "name": "vscode-replicator",
+  "displayName": "Wrap any command in REPL",
+  "icon": "images/icon.png",
+  "description": "Support wrapping any command in REPL",
+  "version": "0.0.6",
+  "license": "SEE LICENSE IN LICENSE",
+  "preview": true,
+  "publisher": "sandipchitale",
+  "author": {
+    "name": "Sandip Chitale"
+  },
+  "maintainers": [
+      "Sandip Chitale <sandipchitale@gmail.com>"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/sandipchitale/vscode-replicator"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "properties": {
+        "vscode-replicator.commandsToWrap": {
+          "type": "array",
+          "description": "Commands to wrap in REPL.",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "kubectl",
+            "helm",
+            "docker"
+          ],
+          "uniqueItems": true
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "vscode-replicator.repl",
+        "title": "Wrap Command in REPL",
+        "category": "REPL"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
