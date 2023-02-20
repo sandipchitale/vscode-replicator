@@ -3,7 +3,7 @@
   "displayName": "Wrap any command in REPL",
   "icon": "images/icon.png",
   "description": "Support wrapping any command in REPL",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "SEE LICENSE IN LICENSE",
   "preview": true,
   "publisher": "sandipchitale",

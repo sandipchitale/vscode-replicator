@@ -10,7 +10,7 @@ Supports:
 - `helm`
 - `docker`
 
-You can conmfigure additional commands.
+You can configure additional commands using config `Commands to Wrap`.
 
 Also supports:
 
