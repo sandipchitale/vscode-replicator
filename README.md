@@ -4,6 +4,24 @@
 
 Wrap any configured command in a REPL.
 
+Supports:
+
+- `kubectl`
+- `helm`
+- `docker`
+
+You can conmfigure additional commands.
+
+Also supports:
+
+- `history` - show history
+- `!number [args]` - run specified command from history with optional additional commands
+- `!! [args]` - run previous command from history with optional additional commands
+
+## Next idea
+
+- Support shell independant completion
+
 ## Requirements
 
 None.
