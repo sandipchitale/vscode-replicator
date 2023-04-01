@@ -10,7 +10,7 @@ Supports:
 - `helm`
 - `docker`
 
-You can configure additional commands using config `Commands to Wrap`.
+You can configure additional commands using config `Commands to Wrap`. YOU can use _ to REPL commands with multiword prefix e.g. echo_Prefix.
 
 Also supports:
 
